@@ -1,0 +1,6 @@
+{
+  "npm-doc": {
+    "ctrl-alt-n": "npm-doc:open-package-page",
+    "ctrl-alt-g": "npm-doc:open-github-repository"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "npm-doc",
+  "version": "1.0.0",
+  "description": "Quickly open an npm package on npmjs.com or its repo on github.com",
+  "main": "index.js",
+  "repository": "https://github.com/zeke/npm-doc-atom",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "keywords": [
+    "npm",
+    "github",
+    "ghub",
+    "packages",
+    "documentation",
+    "reference"
+  ],
+  "author": "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeke/npm-doc-atom/issues"
+  },
+  "homepage": "https://github.com/zeke/npm-doc-atom#readme"
+}

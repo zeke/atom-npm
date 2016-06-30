@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/zeke/npm-doc-atom/issues"
   },
-  "homepage": "https://github.com/zeke/npm-doc-atom#readme"
+  "homepage": "https://github.com/zeke/npm-doc-atom#readme",
+  "dependencies": {
+    "builtins": "^1.0.3"
+  }
 }

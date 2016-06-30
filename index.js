@@ -1,19 +1,28 @@
+const builtins = require('builtins')
+const shell = require('shell')
+
+function getPackage() {
+  return atom.workspace.getActiveTextEditor().getSelectedText() || atom.workspace.getActiveTextEditor().getWordUnderCursor()
+}
+
 module.exports = {
   activate: function () {
     atom.commands.add('atom-text-editor', {
-      'npm-doc:open-github-repository': this.ghub,
-      'npm-doc:open-package-page': this.npm
+      'npm:open-github-repository': this.ghub,
+      'npm:open-package-page': this.npm
     })
   },
 
   ghub: function () {
-    var pkg = atom.workspace.getActiveTextEditor().getSelectedText() || atom.workspace.getActiveTextEditor().getWordUnderCursor()
-    require('shell').openExternal('http://ghub.io/' + pkg)
+    var pkg = getPackage()
+    shell.openExternal(`http://ghub.io/${pkg}`)
   },
 
   npm: function () {
-    var pkg = atom.workspace.getActiveTextEditor().getSelectedText() || atom.workspace.getActiveTextEditor().getWordUnderCursor()
-    if ()
-    require('shell').openExternal('http://npm.im/' + pkg)
+    var pkg = getPackage()
+    var url = builtins.indexOf(pkg) > -1
+      ? `https://nodejs.org/api/${pkg}.html`
+      : `http://npmjs.com/package/${pkg}`
+    shell.openExternal(url)
   }
 }
